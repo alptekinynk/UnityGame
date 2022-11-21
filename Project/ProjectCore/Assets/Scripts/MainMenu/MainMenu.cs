@@ -9,6 +9,7 @@ public class MainMenu : MonoBehaviour
     public Slider SpeedSlider;
     public float speed;
     public int level;
+
     public void PlayGame()
     {
         SceneManager.LoadScene("Level1");

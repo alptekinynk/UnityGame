@@ -9,6 +9,7 @@ TagManager:
   - Hero
   - MainCube
   - FinalBlock
+  - SoundEffect
   layers:
   - Default
   - TransparentFX

@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 public class CubeController : MonoBehaviour
 {
     [SerializeField] private HeroStackController heroStackController;
+    [SerializeField] private SoundEffect sounds;
 
     private Vector3 direction = Vector3.back;
     private bool isStack = false;  
@@ -15,6 +16,7 @@ public class CubeController : MonoBehaviour
     void Start()
     {
         heroStackController = GameObject.FindObjectOfType<HeroStackController>();
+        sounds = GameObject.FindObjectOfType<SoundEffect>();
         if (isMainCube)
         {
             direction = Vector3.forward;
@@ -50,13 +52,18 @@ public class CubeController : MonoBehaviour
                 else
                 {
                     heroStackController.IncreaseBlockStack(gameObject);
-                    SetDirection(); 
+                    SetDirection();
+                    sounds.PlayCollect();
+                    
                 }          
             }  
             if ((hit.transform.name == "CubeRed") && (gameObject.name=="MainCube"))
             {
                 Debug.Log("GAME OVER");
                 PlayerBehaviour.Instance.FailAnimation();
+                
+                
+                
                 //LoadGameOver();
 
 
@@ -64,7 +71,7 @@ public class CubeController : MonoBehaviour
             }
             else if (hit.transform.name == "CubeRed")
             {
-                heroStackController.DecreaseBlockStack(gameObject);
+                heroStackController.DecreaseBlockStack(gameObject);              
             }
             else if (hit.transform.name == "Final")
             {
