@@ -59,6 +59,7 @@
     <Compile Include="Assets\Scripts\Cube\FinalBlock.cs" />
     <Compile Include="Assets\Scripts\EndLevel\EndLevel.cs" />
     <Compile Include="Assets\Scripts\Cube\CubeController.cs" />
+    <Compile Include="Assets\Scripts\SoundsEffect\SoundEffect.cs" />
     <Compile Include="Assets\Scripts\Score\ScoreManager.cs" />
     <Compile Include="Assets\Scripts\PauseMenu\PauseMenu.cs" />
     <Compile Include="Assets\Scripts\Hero\HeroMovementController.cs" />
@@ -71,7 +72,6 @@
     <Compile Include="Assets\Scripts\Hero\HeroInputController.cs" />
     <Compile Include="Assets\Scripts\GameManager\GameManager.cs" />
     <Compile Include="Assets\Scripts\Animation\PlayerBehaviour.cs" />
-    <Compile Include="Assets\Scripts\SoundsEffect\SoundEffect.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
